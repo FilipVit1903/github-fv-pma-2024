@@ -12,7 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
 
         <EditText
             android:id="@+id/etName"
@@ -43,11 +44,13 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:hint="Zadejte obec"
+        android:layout_marginBottom="5dp"
         android:textColor="@color/black"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal">
 
         <EditText
@@ -57,7 +60,7 @@
             android:inputType="number"
             android:hint="Věk"
             android:textColor="@color/black"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"/>
 
         <Button
@@ -83,12 +86,15 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="Informace"
+        android:textSize="30dp"
+        android:padding="10dp"
+        android:textColor="@color/myPrimary04"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </LinearLayout>

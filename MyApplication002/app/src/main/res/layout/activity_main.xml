@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#000000"
     tools:context=".MainActivity">
     
     <LinearLayout
@@ -14,35 +15,128 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/imgLogo"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="centerInside"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Vítejte v MyApp002"
+            android:textSize="30dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#fff"/>
 
         <EditText
             android:id="@+id/etUsername"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:textAlignment="center"
-            android:background="@color/purple"
-            android:editTextColor="@color/myPrimary01"
-            android:padding="20dp"
-            android:hint="Uživatelské jméno"/>
+            android:background="@drawable/et_style"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="15dp"
+            android:padding="10dp"
+            android:hint="Uživatelské jméno" />
 
- 
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/et_style"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Heslo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chbRemember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pamatovat si mě"
+                android:textColor="#fff"
+                android:layout_marginLeft="36dp"/>
+
+            <TextView
+                android:id="@+id/twForgot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textColor="#fff"
+                android:text="Zapomněli jste heslo?"
+                android:layout_weight="1"
+                android:layout_marginRight="40dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style"
+            android:text="Přihlásit se"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            app:cardCornerRadius="14dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:paddingLeft="20dp"
+                android:text="Pro přihlášení použij tyto údaje:" />
+
+                <TextView
+                    android:id="@+id/validUsername"
+                    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:paddingLeft="20dp"
+                android:text="jmeno@tul.cz" />
+
+                <TextView
+                    android:id="@+id/validPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:paddingLeft="20dp"
+                android:text="10284598" /> 
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </LinearLayout>

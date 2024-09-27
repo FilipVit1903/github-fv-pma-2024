@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text="Odeslat"
+            android:text="@string/btn_send"
             android:textSize="16dp"
             android:layout_marginRight="10dp"/>
 
@@ -77,9 +77,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text="Vymazat"
+            android:text="@string/btn_delete"
             android:textSize="16dp"
-            android:backgroundTint="@color/myPrimary03"/>
+            android:backgroundTint="@color/myPrimary02"/>
 
     </LinearLayout>
 
@@ -88,6 +88,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:id="@+id/tvInformation"
         android:text="Informace"
         android:textSize="30dp"
         android:padding="10dp"

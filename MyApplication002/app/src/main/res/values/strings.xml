@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MyApplication002</string>
+    <string name="title">Vítejte v MyApp002</string>
+    <string name="enter_user">Uživatelské jméno</string>
+    <string name="enter_password">Heslo</string>
+    <string name="remember_me">Pamatovat si mě</string>
+    <string name="reset_password">Zapomněli jste heslo?</string>
+    <string name="login">Přihlásit se</string>
+    <string name="instructions">Pro přihlášení použijte tyto údaje</string>
+    <string name="valid_username">jmeno@tul.cz</string>
+    <string name="valid_password">10284598</string>
+    <string name="succes">Přihlášení proběhlo úspěšně</string>
+    <string name="fail">Špatné uživatelské jméno nebo heslo</string>
 </resources>

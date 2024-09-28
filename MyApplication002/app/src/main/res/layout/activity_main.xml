@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000"
+    android:background="@drawable/bcg"
     tools:context=".MainActivity">
     
     <LinearLayout
@@ -20,14 +20,14 @@
             android:layout_height="100dp"
             android:scaleType="centerInside"
             android:layout_marginBottom="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Vítejte v MyApp002"
+            android:text="@string/title"
             android:textSize="30dp"
             android:layout_marginBottom="20dp"
             android:textColor="#fff"/>
@@ -42,23 +42,24 @@
             android:layout_marginLeft="40dp"
             android:layout_marginBottom="15dp"
             android:padding="10dp"
-            android:hint="Uživatelské jméno" />
+            android:hint="@string/enter_user" />
 
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="numberPassword"
             android:background="@drawable/et_style"
             android:layout_marginRight="40dp"
             android:layout_marginLeft="40dp"
+            android:layout_marginBottom="5dp"
             android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:hint="Heslo"/>
+            android:hint="@string/enter_password"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
             <CheckBox
@@ -66,31 +67,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pamatovat si mě"
-                android:textColor="#fff"
-                android:layout_marginLeft="36dp"/>
+                android:text="@string/remember_me"
+                android:textColor="@color/white"
+                android:buttonTint="#707070"
+                android:layout_marginStart="36dp"/>
 
             <TextView
                 android:id="@+id/twForgot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
-                android:textColor="#fff"
-                android:text="Zapomněli jste heslo?"
+                android:textColor="@color/white"
+                android:text="@string/reset_password"
                 android:layout_weight="1"
-                android:layout_marginRight="40dp"/>
+                android:layout_marginEnd="40dp"/>
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_style"
-            android:text="Přihlásit se"
+            android:backgroundTint="@color/purple"
+            android:textColor="@color/white"
+            android:text="@string/login"
+            android:textSize="18sp"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"/>
-
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -98,7 +103,8 @@
             android:background="@drawable/et_style"
             app:cardCornerRadius="14dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp">
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -111,32 +117,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:paddingLeft="20dp"
-                android:text="Pro přihlášení použij tyto údaje:" />
+                android:paddingStart="20sp"
+                android:textColor="@color/black"
+                android:text="@string/instructions" />
 
                 <TextView
-                    android:id="@+id/validUsername"
-                    android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:paddingLeft="20dp"
-                android:text="jmeno@tul.cz" />
-
-                <TextView
-                    android:id="@+id/validPassword"
+                android:id="@+id/validUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:paddingLeft="20dp"
-                android:text="10284598" /> 
+                android:paddingStart="20sp"
+                    android:textColor="@color/black"
+                android:text="@string/valid_username" />
+
+                <TextView
+                android:id="@+id/validPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:paddingStart="20sp"
+                    android:textColor="@color/black"
+                android:text="@string/valid_password"/>
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
+            <TextView
+                android:id="@+id/twSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/succes"
+                android:textColor="@color/white"
+                android:background="@drawable/tw_succes"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:textAlignment="center"
+                android:paddingVertical="20dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:visibility="gone"
+                />
+
+        <TextView
+            android:id="@+id/twFail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fail"
+            android:textColor="@color/white"
+            android:background="@drawable/tw_fail"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:textAlignment="center"
+            android:paddingVertical="20dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
     </LinearLayout>
-
-
-
 
 </LinearLayout>

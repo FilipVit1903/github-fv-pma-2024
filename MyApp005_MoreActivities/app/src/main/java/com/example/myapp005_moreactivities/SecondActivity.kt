@@ -9,26 +9,32 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapp005_moreactivities.databinding.ActivityMainBinding
+import com.example.myapp005_moreactivities.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivitySecondBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        // enableEdgeToEdge()
-        setContentView(R.layout.activity_second)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
+        setContentView(binding.second)
 
-        val twInfo = findViewById<TextView>(R.id.twInfo)
-        val etSecNick = findViewById<EditText>(R.id.etSecNick)
+        val twInfo = binding.twInfo
+        val etSecNick = binding.etSecNick
 
         //Load data from intent
         val nickname = intent.getStringExtra("NICK_NAME")
         twInfo.text = "Data z první aktivity Jméno: $nickname"
 
-        val btnBack = findViewById<Button>(R.id.btnBack)
+        val btnBack = binding.btnBack
         btnBack.setOnClickListener {
             finish()
         }
 
-        val btnThird = findViewById<Button>(R.id.btnThird)
+        val btnThird = binding.btnThird
         btnThird.setOnClickListener {
             val secondNickname = etSecNick.text.toString()
             val intent = Intent(this, ThirdActivity::class.java)

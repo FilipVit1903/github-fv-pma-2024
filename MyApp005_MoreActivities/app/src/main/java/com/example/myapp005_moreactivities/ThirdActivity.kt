@@ -23,7 +23,7 @@ class ThirdActivity : AppCompatActivity() {
         val twInfo = binding.twInfo
 
         //Load data from intent
-        val secondNickname = intent.getStringExtra("SECOND_NAME")
+        val secondNickname = intent.getStringExtra("C_SECOND_NAME")
         twInfo.text = "Data z druhé aktivity Přezdívka: $secondNickname"
 
         val btnPrevious = binding.btnPrevious

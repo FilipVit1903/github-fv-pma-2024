@@ -13,7 +13,25 @@
         android:id="@+id/etNickname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Vyplňte přezdívku"/>
+        android:hint="Vyplňte jméno"/>
+
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vyplňte příjmení"/>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vyplňte věk"/>
+
+    <EditText
+        android:id="@+id/etAdress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vyplňte adresu"/>
 
     <Button
         android:id="@+id/btnSecond"

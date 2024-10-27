@@ -3,6 +3,7 @@ package com.example.myapp006_toast_snackbar
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -41,20 +42,18 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val toastWrapper = null
+        val layout = layoutInflater.inflate(R.layout.custom_toast_layout,toastWrapper)
+
         //Custom TOAST
         binding.btnShowCustomToast.setOnClickListener {
             //nacteni custom layoutu toast
-            val toastLayout = layoutInflater.inflate(R.layout.custom_toast_layout)
-
+            Toast(this).apply {
+                duration = Toast.LENGTH_LONG
+                view = layout
+            }.show()
         }
 
 
     }
-}
-
-
-}
-
-
-
 }

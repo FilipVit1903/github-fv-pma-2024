@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.myapp006_toast_snackbar.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

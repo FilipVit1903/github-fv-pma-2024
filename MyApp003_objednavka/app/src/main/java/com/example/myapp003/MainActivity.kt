@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myapp003.databinding.ActivityMainBinding
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -55,6 +57,17 @@ class MainActivity : AppCompatActivity() {
 
         binding.rbSmoothie03.setOnClickListener {
             binding.imgSmoothie.setImageResource(R.drawable.peach_smoothie)
+        }
+
+        //custom toast
+        val toastWrapper = null
+        val toastLayout = layoutInflater.inflate(R.layout.custom_toast_layout,toastWrapper)
+
+        binding.btnOrder.setOnClickListener {
+            Toast(this).apply {
+                duration = Toast.LENGTH_LONG
+                view = toastLayout
+            }.show()
         }
 
     }

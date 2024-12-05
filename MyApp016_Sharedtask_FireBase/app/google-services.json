@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "956169917356",
+    "project_id": "sharedtasklist-7067f",
+    "storage_bucket": "sharedtasklist-7067f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956169917356:android:b32ab4614d5c1047d3a009",
+        "android_client_info": {
+          "package_name": "com.example.myapp016_sharedtask_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXOrt-5HivlygsCpBD9RNrOpugRcq0bow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

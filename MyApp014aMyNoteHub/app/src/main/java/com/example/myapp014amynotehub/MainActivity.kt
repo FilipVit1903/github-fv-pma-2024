@@ -239,7 +239,6 @@ class MainActivity : AppCompatActivity() {
                         currentCategory = categoryNames[position]
                         loadNotes()
                     }
-
                     override fun onNothingSelected(parent: AdapterView<*>?) {}
                 }
         }

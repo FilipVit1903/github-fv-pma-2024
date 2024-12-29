@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.myapp007a_fragmentsexample_01"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.myapp007a_fragmentsexample_01"
@@ -25,6 +25,10 @@ android {
                 "proguard-rules.pro"
             )
         }
+
+        buildFeatures {
+            viewBinding = true
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -36,7 +40,7 @@ android {
 }
 
 dependencies {
-
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

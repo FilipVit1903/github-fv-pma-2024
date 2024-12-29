@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- Textové pole pro jméno -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Zadejte své jméno"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Textové pole pro věk -->
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Zadejte svůj věk"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Checkbox pro označení dospělosti -->
+        <CheckBox
+            android:id="@+id/chbAdult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jsem dospělý"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tlačítko pro uložení dat -->
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uložit data"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tlačítko pro načtení dat -->
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Načíst data" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

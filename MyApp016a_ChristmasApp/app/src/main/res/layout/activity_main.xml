@@ -1,5 +1,75 @@
-<FrameLayout
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do Vánoc nám zbývá ještě"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:layout_marginBottom="16sp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/countdownTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Odpočet do Vánoc"
+        android:textSize="18sp"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="14sp"
+        android:textAlignment="center"
+        android:background="@drawable/bcg_green_rad"
+        android:textColor="#1d1d34"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/randomWish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:text="Veselé Vánoce!" />
+
+    <Button
+        android:id="@+id/btnNextWish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Další přání"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="28sp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spustit Kvíz"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginRight="10sp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btnViewResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D00419"
+            android:text="Historie výsledků" />
+
+    </LinearLayout>
+
+</LinearLayout>

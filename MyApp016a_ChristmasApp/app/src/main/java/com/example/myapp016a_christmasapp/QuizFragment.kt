@@ -54,6 +54,7 @@ class QuizFragment : Fragment() {
         _binding = null
     }
 
+    // Nastavení otázky
     private fun setupQuestion() {
         if (currentQuestionIndex < questions.size) {
             val question = questions[currentQuestionIndex]
@@ -71,6 +72,7 @@ class QuizFragment : Fragment() {
         }
     }
 
+    // Kontrola odpovědi
     private fun checkAnswer() {
         val selectedOption = binding.answersGroup.checkedRadioButtonId
         if (selectedOption == -1) {
@@ -87,6 +89,7 @@ class QuizFragment : Fragment() {
         setupQuestion()
     }
 
+    // Zobrazení výsledků
     private fun showResults() {
         Toast.makeText(
             context,
@@ -94,8 +97,7 @@ class QuizFragment : Fragment() {
             Toast.LENGTH_LONG
         ).show()
 
-        // Návrat na domovskou obrazovku
-        activity?.onBackPressed()
+
     }
 
     data class Question(
